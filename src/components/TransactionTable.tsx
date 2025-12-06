@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Transaction, TransactionType, Category } from '../types';
 import { Trash2, Plus } from 'lucide-react';
-import { v4 as uuidv4 } from 'uuid'; // Assumption: user knows they can't actually install uuid here, so I'll implement a simple ID generator if uuid isn't available, but standard practice in these prompts usually assumes common libs or I provide a utility. I'll use a simple utility inside App for adding.
-
 interface Props {
   transactions: Transaction[];
   onAdd: (t: Omit<Transaction, 'id'>) => void;
